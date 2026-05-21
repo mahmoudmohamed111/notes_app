@@ -11,6 +11,7 @@ class Notes_app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: NotesView.id,
       routes: {NotesView.id: (context) => NotesView()},
       theme: ThemeData(brightness: Brightness.dark),
