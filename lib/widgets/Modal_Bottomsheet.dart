@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/Custom_TextField.dart';
+import 'package:notes_app/widgets/Notes/Custom_Button.dart';
 
 class ModalBottomsheet extends StatelessWidget {
   const ModalBottomsheet({super.key});
@@ -21,19 +22,7 @@ class ModalBottomsheet extends StatelessWidget {
             ),
           ),
           Spacer(),
-          MaterialButton(
-            minWidth: double.infinity,
-            height: 50,
-            color: Colors.blue,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusGeometry.circular(10),
-            ),
-            onPressed: () {},
-            child: Text(
-              "Add",
-              style: TextStyle(color: Colors.black, fontSize: 21),
-            ),
-          ),
+          CustomButton(),
         ],
       ),
     );
