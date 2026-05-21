@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/Custom_TextField.dart';
-import 'package:notes_app/widgets/Notes/Custom_Button.dart';
+import 'package:notes_app/widgets/Custom_Button.dart';
 
 class ModalBottomsheet extends StatelessWidget {
   const ModalBottomsheet({super.key});
