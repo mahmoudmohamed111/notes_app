@@ -8,20 +8,14 @@ class ModalBottomsheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 30),
-      height: 450,
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+      height: 400,
       child: Column(
         children: [
           CustomTextField(text: "Title"),
           SizedBox(height: 16),
-          CustomTextField(
-            text: "Content",
-            Textfield_Padding: EdgeInsets.symmetric(
-              vertical: 60,
-              horizontal: 10,
-            ),
-          ),
-          Spacer(),
+          CustomTextField(text: "Content", Maxlines: 5),
+          SizedBox(height: 100),
           CustomButton(),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key});
@@ -6,9 +7,9 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      minWidth: double.infinity,
+      minWidth: MediaQuery.of(context).size.width,
       height: 50,
-      color: Colors.blue,
+      color: kPrimaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(10),
       ),
