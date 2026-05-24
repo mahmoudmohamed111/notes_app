@@ -14,25 +14,23 @@ class ModalBottomsheet extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
       height: 400,
-      child: SingleChildScrollView(
-        child: BlocConsumer<AddNoteCubit, AddNoteState>(
-          listener: (context, state) {
-            if (state is AddNoteSucces) {
-              Navigator.of(context).pop();
-            }
-            if (state is AddNoteFailure) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text("Failed try to add note again")),
-              );
-            }
-          },
-          builder: (context, state) {
-            return ModalProgressHUD(
-              inAsyncCall: state is AddNoteLoading ? true : false,
-              child: Add_NoteForm(),
+      child: BlocConsumer<AddNoteCubit, AddNoteState>(
+        listener: (context, state) {
+          if (state is AddNoteSucces) {
+            Navigator.of(context).pop();
+          }
+          if (state is AddNoteFailure) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text("Failed try to add note again")),
             );
-          },
-        ),
+          }
+        },
+        builder: (context, state) {
+          return ModalProgressHUD(
+            inAsyncCall: state is AddNoteLoading ? true : false,
+            child: SingleChildScrollView(child: Add_NoteForm()),
+          );
+        },
       ),
     );
   }
